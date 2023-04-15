@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Correo Electronico:</label>
+        <input [(ngModel)]="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Correo Aqui.">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mensaje de Ejemplo:</label>
+        <textarea [(ngModel)]="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <button (click)="sendMessage()" type="button" class="btn btn-primary">Enviar Mensaje</button>
+      <br>
+      <br>
+
+      <div *ngIf="mostrar" class="alert alert-success" role="alert" style="margin-top:50px">
+       {{enviar}}
+      </div>
+
+</div>
